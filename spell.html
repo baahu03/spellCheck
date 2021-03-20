@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SPELLING CHECK</title>
+	<style type="text/css">
+		.con{
+			text-align: center;
+			color: #666;
+		}
+		.In{
+			text-align: center;
+			background-color: #2d2d37;
+			color: #fff;
+		}
+		.out{
+			text-align: center;
+			padding-top: 8px;
+		}
+	</style>
+	 <script type="text/javascript"> 
+        document.getElementById('myinput') 
+            .addEventListener('change', function() { 
+              
+            var x=new FileReader(); 
+            x.onload=function(){ 
+                document.getElementById('tx') 
+                        .textContent=x.result; 
+            } 
+              
+            x.readAsText(this.files[0]); 
+        }) 
+    </script>
+</head>
+<body style="background-color: #00ffff;">
+		<div class="con">
+			<h1 >Spelling mistake checking</h1>
+		</div>
+		<div class="In">
+			<input type="file" id="myinput">
+		</div>
+		<div class="out">
+			<textarea id="tx" style="width: 500px;height: 200px;">
+				
+			</textarea>
+		</div>
+		
+</body>
+</html>
